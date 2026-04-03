@@ -1,0 +1,512 @@
+.page { display: flex; flex-direction: column; gap: 28px; }
+
+.pageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.sub { font-size: 14px; color: var(--text-3); }
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+}
+
+.tab {
+  padding: 8px 18px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-2);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:hover { color: var(--text); }
+}
+
+.tabActive {
+  color: var(--text);
+  border-bottom-color: var(--text);
+  font-weight: 500;
+}
+
+.center { display: flex; justify-content: center; padding: 60px; }
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 9px 14px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+
+  &::placeholder { color: var(--text-3); }
+  &:focus { border-color: var(--border-2); }
+}
+
+.roleSelect {
+  padding: 9px 14px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+
+  &:focus { border-color: var(--border-2); }
+}
+
+.tableWrap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead tr {
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+  }
+
+  th {
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+}
+
+.tableRow {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+
+  &:last-child { border-bottom: none; }
+  &:hover { background: var(--bg-3); }
+
+  td { padding: 13px 20px; }
+}
+
+.userCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userAvatar {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 6px;
+  background: var(--bg-4);
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.youBadge {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.emailCell { font-size: 13px; color: var(--text-2); }
+
+.roleBadge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+
+  &.student { background: var(--bg-4); color: var(--text-2); }
+  &.teacher { background: rgba(74,222,128,0.1); color: var(--success); }
+  &.admin { background: rgba(251,191,36,0.1); color: var(--warning); }
+}
+
+.rowActions { display: flex; gap: 6px; }
+
+.editBtn {
+  padding: 5px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:hover { border-color: var(--border-2); color: var(--text); }
+}
+
+.deleteBtn {
+  padding: 5px 12px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-3);
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:hover { border-color: rgba(248,113,113,0.3); color: var(--error); background: rgba(248,113,113,0.06); }
+}
+
+.emptyCell {
+  text-align: center;
+  padding: 32px;
+  font-size: 14px;
+  color: var(--text-3);
+}
+
+.groupGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.groupCard {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.groupName {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.groupCount {
+  font-size: 12px;
+  color: var(--text-3);
+  background: var(--bg-3);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.groupBody {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.groupSection { display: flex; flex-direction: column; gap: 8px; }
+
+.groupSectionLabel {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.memberList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.memberItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.memberAvatar {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 4px;
+  background: var(--bg-4);
+  color: var(--text-2);
+  font-size: 10px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+}
+
+.teacherRole {
+  font-size: 11px;
+  color: var(--text-3);
+  margin-left: 6px;
+}
+
+.main { color: var(--accent) !important; }
+
+.confirmBody { display: flex; flex-direction: column; gap: 20px; }
+.confirmText { font-size: 14px; color: var(--text-2); line-height: 1.5; }
+.confirmActions { display: flex; justify-content: flex-end; gap: 8px; }
+
+.formGrid { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+
+.formField { display: flex; flex-direction: column; gap: 6px; }
+
+.formLabel {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.formSelect {
+  padding: 12px 14px;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+
+  &:focus { border-color: var(--border-2); }
+}
+
+.formError { font-size: 12px; color: var(--error); }
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 4px;
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+}
+
+// ── Schedule tab ───────────────────────────────────────────────────────────────
+.schedWeekNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.schedNavBtn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-weight: 600;
+  transition: all 0.15s;
+  &:hover { border-color: #6366f1; color: #6366f1; }
+}
+
+.schedWeekLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  strong { font-size: 1rem; color: var(--text-primary); }
+  span { font-size: 0.8rem; color: var(--text-secondary); }
+}
+
+.schedGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.schedDay {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.schedDayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.schedDayName { font-size: 0.8rem; font-weight: 800; color: var(--text-primary); text-transform: uppercase; }
+.schedDayDate { font-size: 0.75rem; color: var(--text-secondary); }
+
+.schedLessons { display: flex; flex-direction: column; gap: 0; }
+
+.schedLesson {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+  &:last-child { border-bottom: none; }
+
+  &.schedLessonCancelled {
+    background: rgba(239,68,68,.04);
+    .schedSubj, .schedTopic, .schedTeacher { opacity: 0.5; text-decoration: line-through; }
+  }
+
+  &.schedLessonReplaced {
+    background: rgba(245,158,11,.04);
+  }
+}
+
+.schedLessonHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.schedLessonNum {
+  width: 20px;
+  height: 20px;
+  background: #6366f1;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.schedLessonTime { font-size: 0.7rem; color: var(--text-secondary); flex: 1; }
+
+.schedTag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+.schedTagCancel { background: rgba(239,68,68,.15); color: #ef4444; }
+.schedTagReplace { background: rgba(245,158,11,.15); color: #f59e0b; }
+
+.schedSubj { font-size: 0.72rem; color: var(--text-secondary); margin: 0 0 2px; line-height: 1.2; }
+.schedTopic { font-size: 0.78rem; font-weight: 600; color: var(--text-primary); margin: 0 0 2px; line-height: 1.2; }
+.schedTeacher { font-size: 0.7rem; color: var(--text-secondary); margin: 0 0 4px; }
+.schedNote { font-size: 0.68rem; color: #f59e0b; margin: 0 0 4px; font-style: italic; }
+
+.schedActions { display: flex; gap: 4px; }
+
+.schedCancelBtn, .schedRestoreBtn, .schedReplaceBtn {
+  flex: 1;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid;
+  transition: all 0.15s;
+}
+
+.schedCancelBtn {
+  border-color: rgba(239,68,68,.3);
+  background: rgba(239,68,68,.08);
+  color: #ef4444;
+  &:hover { background: rgba(239,68,68,.15); }
+}
+
+.schedRestoreBtn {
+  border-color: rgba(34,197,94,.3);
+  background: rgba(34,197,94,.08);
+  color: #22c55e;
+  &:hover { background: rgba(34,197,94,.15); }
+}
+
+.schedReplaceBtn {
+  border-color: rgba(99,102,241,.3);
+  background: rgba(99,102,241,.08);
+  color: #6366f1;
+  &:hover { background: rgba(99,102,241,.15); }
+}
+
+.modalDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 16px;
+  strong { color: var(--text-primary); }
+}
+
+// (form field styles already defined above)
+.formInput {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  &:focus { border-color: #6366f1; }
+}

@@ -1,0 +1,4 @@
+.page { min-height: 100vh; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+.code { font-family: var(--font-display); font-size: 80px; font-weight: 700; color: var(--border-2); line-height: 1; }
+.msg { font-size: 16px; color: var(--text-2); }
+.link { font-size: 13px; color: var(--text-3); text-decoration: underline; transition: color 0.15s; &:hover { color: var(--text); } }

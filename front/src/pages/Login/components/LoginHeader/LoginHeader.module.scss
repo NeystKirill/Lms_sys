@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 32px;
+}
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.logo {
+  height: 32px;
+  width: auto;
+}
+.logoText {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-2);
+  letter-spacing: 0.12em;
+}
+.title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+.sub { font-size: 13px; color: var(--text-3); }

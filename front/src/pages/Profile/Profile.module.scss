@@ -1,0 +1,454 @@
+.page {
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+// ── Hero ──────────────────────────────────────────────────────────────────────
+.profileHero {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.heroAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+}
+
+.teacherAvatar {
+  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+}
+
+.adminAvatar {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+}
+
+.heroInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.heroName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+}
+
+.heroEmail {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 4px 0 0;
+}
+
+.heroGroup {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 4px 0 0;
+  strong { color: var(--text-primary); }
+}
+
+.heroActions {
+  margin-left: auto;
+}
+
+.roleBadge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  &.student  { background: rgba(99,102,241,.15); color: #6366f1; }
+  &.teacher  { background: rgba(14,165,233,.15); color: #0ea5e9; }
+  &.admin    { background: rgba(245,158,11,.15); color: #f59e0b; }
+}
+
+// ── Edit card ──────────────────────────────────────────────────────────────────
+.editCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.editActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+// ── Section ────────────────────────────────────────────────────────────────────
+.section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 20px;
+}
+
+.center { display: flex; justify-content: center; padding: 32px 0; }
+.empty { color: var(--text-secondary); font-size: 0.9rem; }
+
+// ── Stats Grid ─────────────────────────────────────────────────────────────────
+.statsGrid {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.statBig { flex: 0 0 auto; }
+
+.statCircle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: conic-gradient(#6366f1 calc(var(--pct) * 3.6deg), var(--bg-secondary) 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &::after {
+    content: '';
+    width: 82px;
+    height: 82px;
+    background: var(--bg-card);
+    border-radius: 50%;
+    position: absolute;
+  }
+}
+
+.statCircleVal {
+  position: relative;
+  z-index: 1;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.statLabel {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+.statsSmall {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  flex: 1;
+}
+
+.statSmallCard {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--accent);
+}
+
+.statSmallVal {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.statSmallLabel {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+// ── Progress ──────────────────────────────────────────────────────────────────
+.progressWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progressTrack {
+  flex: 1;
+  height: 10px;
+  background: var(--bg-secondary);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.6s ease;
+}
+
+.progressLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  width: 36px;
+  text-align: right;
+}
+
+// ── Grades ────────────────────────────────────────────────────────────────────
+.avgBanner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.avgLabel { font-size: 0.9rem; color: var(--text-secondary); }
+
+.avgVal {
+  font-size: 2rem;
+  font-weight: 900;
+  &.good { color: #22c55e; }
+  &.mid  { color: #f59e0b; }
+  &.bad  { color: #ef4444; }
+}
+
+.subjectGrades {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.subjCard {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.subjName {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.subjStats {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.subjAvg { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+.subjCount { font-size: 0.75rem; color: var(--text-muted, var(--text-secondary)); }
+
+.subjBar {
+  height: 4px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.subjBarFill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.6s;
+}
+
+// History tables
+.histTitle { font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); margin: 0 0 10px; }
+
+.gradesTable { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+
+.gradesHead {
+  display: grid;
+  grid-template-columns: 1fr 120px 80px;
+  padding: 10px 14px;
+  background: var(--bg-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.gradesRow {
+  display: grid;
+  grid-template-columns: 1fr 120px 80px;
+  padding: 10px 14px;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  &:hover { background: var(--bg-secondary); }
+}
+
+.gradeSubj { font-size: 0.85rem; color: var(--text-primary); }
+.gradeDate { font-size: 0.82rem; color: var(--text-secondary); }
+
+.gradeBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 28px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  &.gradeGood { background: rgba(34,197,94,.15); color: #22c55e; }
+  &.gradeMid  { background: rgba(245,158,11,.15); color: #f59e0b; }
+  &.gradeBad  { background: rgba(239,68,68,.15); color: #ef4444; }
+  &.gradeN    { background: rgba(107,114,128,.15); color: #9ca3af; }
+}
+
+// ── Group table (teacher) ─────────────────────────────────────────────────────
+.groupTable { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+
+.groupHead {
+  display: grid;
+  grid-template-columns: 2fr 70px 70px 70px 120px 80px;
+  padding: 10px 14px;
+  background: var(--bg-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.groupRow {
+  display: grid;
+  grid-template-columns: 2fr 70px 70px 70px 120px 80px;
+  align-items: center;
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+  &:hover { background: var(--bg-hover, var(--bg-secondary)); }
+}
+
+.groupStudentCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.groupAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.groupStudentName { font-size: 0.875rem; color: var(--text-primary); }
+
+.gCell { font-size: 0.9rem; color: var(--text-primary); text-align: center; }
+.lateText { color: #f59e0b; font-weight: 600; }
+.absentText { color: #ef4444; font-weight: 600; }
+
+.gPctCell { display: flex; flex-direction: column; gap: 4px; }
+
+.pctBadge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  &.good { color: #22c55e; }
+  &.mid  { color: #f59e0b; }
+  &.bad  { color: #ef4444; }
+}
+
+.miniBar {
+  height: 4px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.miniBarFill { height: 100%; border-radius: 99px; transition: width 0.4s; }
+
+.avgCell {
+  font-weight: 700;
+  &.good { color: #22c55e; }
+  &.mid  { color: #f59e0b; }
+  &.bad  { color: #ef4444; }
+}
+
+// ── Admin Cards ────────────────────────────────────────────────────────────────
+.adminCards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.adminCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--primary, #6366f1);
+    transform: translateX(4px);
+    box-shadow: 0 4px 20px rgba(99,102,241,.1);
+  }
+}
+
+.adminCardIcon { font-size: 1.75rem; flex-shrink: 0; }
+
+.adminCardBody { flex: 1; }
+
+.adminCardTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 4px;
+}
+
+.adminCardDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.adminCardArrow {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  transition: transform 0.2s;
+  .adminCard:hover & { transform: translateX(4px); color: var(--primary, #6366f1); }
+}

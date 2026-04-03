@@ -1,0 +1,41 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.sub { font-size: 14px; color: var(--text-3); }
+
+.heroBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-2);
+  background: var(--bg-2);
+}
+
+.roleDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+
+  &.teacher { background: var(--success); }
+  &.admin { background: var(--warning); }
+}

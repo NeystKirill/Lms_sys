@@ -1,0 +1,77 @@
+.card {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.15s;
+
+  &:hover {
+    border-color: rgba(108, 99, 255, 0.3);
+  }
+}
+
+.num {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 6px;
+  background: rgba(108, 99, 255, 0.12);
+  color: var(--accent-light);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.topic {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subject {
+  font-size: 11px;
+  color: var(--accent-light);
+}
+
+.time {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.teacher {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.editBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.15s;
+
+  .card:hover & {
+    opacity: 1;
+  }
+}

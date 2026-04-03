@@ -1,0 +1,204 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  background: var(--navbar-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.brand { flex-shrink: 0; }
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logoImg {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.12em;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: block;
+  padding: 6px 13px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+
+  &:hover { color: var(--text); background: var(--bg-3); }
+
+  &.active {
+    color: var(--accent-2);
+    background: var(--accent-dim);
+    font-weight: 500;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.themeBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-3);
+  font-size: 13px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.15s;
+  &:hover { color: var(--accent-2); border-color: var(--accent); }
+}
+
+.userMenu { position: relative; }
+
+.userBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 4px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  &:hover { border-color: var(--accent); background: var(--accent-dim); }
+}
+
+.avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.userName { font-size: 13px; font-weight: 500; color: var(--text); }
+
+.chevron {
+  font-size: 10px;
+  color: var(--text-3);
+  transition: transform 0.2s;
+  &.up { transform: rotate(180deg); }
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 200px;
+  background: var(--bg-2);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25), 0 0 0 1px var(--accent-dim);
+  overflow: hidden;
+  z-index: 200;
+}
+
+.dropUser {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.dropAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.dropName { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+
+.dropRole {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  &.student { background: var(--bg-4); color: var(--text-2); }
+  &.teacher { background: rgba(52,211,153,0.1); color: var(--success); }
+  &.admin { background: rgba(251,191,36,0.1); color: var(--warning); }
+}
+
+.dropDivider { height: 1px; background: var(--border); }
+
+.dropItem {
+  display: block;
+  width: 100%;
+  padding: 11px 16px;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-2);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  &:hover { background: var(--bg-3); color: var(--text); }
+}
+
+.dropOut {
+  color: var(--error);
+  &:hover { background: rgba(248,113,113,0.08); color: var(--error); }
+}

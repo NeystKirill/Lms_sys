@@ -1,0 +1,6 @@
+.form { display: flex; flex-direction: column; gap: 14px; }
+.err { font-size: 13px; color: var(--error); padding: 10px 14px; background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.2); border-radius: var(--radius); }
+.success { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 32px 0; color: var(--text-2); font-size: 14px; }
+.check { font-size: 28px; color: var(--success); }
+.footer { font-size: 13px; color: var(--text-3); text-align: center; margin-top: 4px; }
+.link { color: var(--text-2); text-decoration: underline; transition: color 0.15s; &:hover { color: var(--text); } }
